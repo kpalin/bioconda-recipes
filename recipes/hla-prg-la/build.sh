@@ -20,7 +20,7 @@ CONDA_PREFIX=${CONDA_PREFIX:-$PREFIX}
 
 export CPLUS_INCLUDE_PATH=${PREFIX}/include
 export LIBRARY_PATH=${PREFIX}/lib
-
+export MACOSX_RPATH="ON"
 
 cd ${BASE}/bamtools
 mkdir -p build
