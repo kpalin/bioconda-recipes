@@ -1,5 +1,5 @@
-{% set version = "2.18.21" %}
-{% set sha256 = "36e216986e5354920b6ea79289ae01c3117d10012020d46ce8e14f70d351365c" %}
+{% set version = "2.18.29" %}
+{% set sha256 = "71c7daadbd0dc133da44a229850eb3b75fdcf6752c5c04018f8651977710aa8e" %}
 
 package:
   name: picard
