@@ -1,0 +1,47 @@
+{% set version = "2.5" %}
+
+package:
+  name: gangstr
+  version: {{ version }}
+
+build:
+  number: 0
+
+source:
+  url: https://github.com/gymreklab/GangSTR/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: 3f873fd4506cdb28f38a0807433a8d34c9acba81954c02116e2be4a55cef71de
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake
+    - automake
+    - autoconf
+  host:
+    - htslib
+    - libcurl
+    - bzip2
+    - xz
+    - zlib
+    - libdeflate
+    - gsl
+    - openssl  # [not osx]
+  run:
+    - htslib
+    - gsl
+    - libcurl
+    - bzip2
+    - xz
+    - zlib
+    - libdeflate
+    - openssl  # [not osx]
+about:
+  home: https://github.com/gymreklab/GangSTR/
+  license: GPLv2
+  license_file: LICENSE
+  summary: A tool for genome-wide profiling tandem repeats from short reads. 
+
+test:
+  commands:
+    - GangSTR  --version
+
